@@ -1,0 +1,25 @@
+{
+  "groups": [
+    {
+      "name": "rocketmq.enhance",
+      "type": "com.zsq.winter.rocketmq.config.WinterRocketMQProperties",
+      "sourceType": "com.zsq.winter.rocketmq.config.WinterRocketMQProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "rocketmq.enhance.enabled-isolation",
+      "type": "java.lang.Boolean",
+      "description": "启动后会自动在topic上拼接激活的配置文件，达到自动隔离的效果(默认为true)",
+      "sourceType": "com.zsq.winter.rocketmq.config.WinterRocketMQProperties",
+      "defaultValue": true
+    },
+    {
+      "name": "rocketmq.enhance.environment",
+      "type": "java.lang.String",
+      "description": "隔离环境名称，拼接到topic后，如：topic_dev，默认空字符串",
+      "sourceType": "com.zsq.winter.rocketmq.config.WinterRocketMQProperties"
+    }
+  ],
+  "hints": []
+}
