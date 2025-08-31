@@ -1,6 +1,6 @@
 # Winter RocketMQ Spring Boot Starter 🚀
 ## 简介 ✨
-Winter RocketMQ Spring Boot Starter 是对原生 RocketMQ Spring Boot Starter 的增强实现，提供了以下核心特性：
+winter-rocket-spring-boot-starter 是对原生 RocketMQ Spring Boot Starter 的增强实现，提供了以下核心特性：
 
 1. 🕒 完美支持 Java 8 中的 LocalDate 和 LocalDateTime 类型
 2. 🌍 环境隔离：自动为不同环境（如dev、test、prod）的消息添加环境后缀
@@ -11,10 +11,10 @@ Winter RocketMQ Spring Boot Starter 是对原生 RocketMQ Spring Boot Starter �
 ### 1. 项目引入 📌
 在你的项目 pom.xml 中添加依赖：
 ```xml
-<dependency>
-    <groupId>com.winter</groupId>
-    <artifactId>winter-rocketmq-spring-boot-starter</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+ <dependency>
+    <groupId>io.github.hahaha-zsq</groupId>
+    <artifactId>winter-rocket-spring-boot-starter</artifactId>
+    <version>xxx</version>
 </dependency>
 ```
 ### 2. 配置文件 📝
