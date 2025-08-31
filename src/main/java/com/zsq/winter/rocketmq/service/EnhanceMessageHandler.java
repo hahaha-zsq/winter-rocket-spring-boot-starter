@@ -66,18 +66,6 @@ public abstract class EnhanceMessageHandler<T extends BaseMessage> {
     protected abstract void handleMaxRetriesExceeded(T message);
 
     /**
-     * 消息过滤器
-     * 可以通过重写此方法实现消息过滤逻辑
-     * 例如：消息去重、消息有效性验证等
-     *
-     * @param message 待过滤的消息
-     * @return true表示消息需要被过滤掉（不处理），false表示需要处理该消息
-     */
-    protected boolean filter(T message) {
-        return false;
-    }
-
-    /**
      * 是否启用消息重试机制
      * 子类通过实现此方法来决定是否对失败的消息进行重试
      *
@@ -101,6 +89,18 @@ public abstract class EnhanceMessageHandler<T extends BaseMessage> {
      *         false表示内部处理异常，如果未开启重试，消息会被确认消费
      */
     protected abstract boolean throwException();
+
+    /**
+     * 消息过滤器
+     * 可以通过重写此方法实现消息过滤逻辑
+     * 例如：消息去重、消息有效性验证等
+     *
+     * @param message 待过滤的消息
+     * @return true表示消息需要被过滤掉（不处理），false表示不需要处理该消息
+     */
+    protected boolean filter(T message) {
+        return false;
+    }
 
     /**
      * 获取最大重试次数
@@ -137,7 +137,7 @@ public abstract class EnhanceMessageHandler<T extends BaseMessage> {
 
         // 执行消息过滤
         if (filter(message)) {
-            log.info("消息id{}不满足消费条件，已过滤。", message.getKey());
+            log.info("消息业务键{}不满足消费条件，已过滤。", message.getKey());
             return;
         }
 
