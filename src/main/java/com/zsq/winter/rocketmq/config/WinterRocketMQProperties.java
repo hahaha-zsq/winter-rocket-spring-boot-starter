@@ -3,7 +3,7 @@ package com.zsq.winter.rocketmq.config;
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
-@ConfigurationProperties(prefix = "winter.rocketmq")
+@ConfigurationProperties(prefix = "winter-rocketmq")
 @Data
 public class WinterRocketMQProperties {
 
