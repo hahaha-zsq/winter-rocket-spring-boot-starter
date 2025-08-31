@@ -33,7 +33,7 @@ git commit -m "发布版本 $VERSION"
 
 # 推送到远程仓库（master分支）
 echo "推送到远程仓库..."
-git push origin main
+git push origin master
 
 # 检查tag是否已存在
 if git rev-parse "v$VERSION" >/dev/null 2>&1; then
